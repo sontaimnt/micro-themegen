@@ -1,0 +1,15 @@
+#! /nix/store/pj1hnyxhcsw1krmhnbb9rjvqssbzliw8-bash-5.2-p15/bin/bash -e
+PATH=${PATH:+':'$PATH':'}
+PATH=${PATH/':''/nix/store/vdj54aaq67wsdmdbfcihh5ary9hbd2a3-python3.11-pip-22.3.1/bin'':'/':'}
+PATH='/nix/store/vdj54aaq67wsdmdbfcihh5ary9hbd2a3-python3.11-pip-22.3.1/bin'$PATH
+PATH=${PATH#':'}
+PATH=${PATH%':'}
+export PATH
+PATH=${PATH:+':'$PATH':'}
+PATH=${PATH/':''/nix/store/hi1kv51l7rba36vqr3gf6wcpg57aiy3y-python3-3.11.1/bin'':'/':'}
+PATH='/nix/store/hi1kv51l7rba36vqr3gf6wcpg57aiy3y-python3-3.11.1/bin'$PATH
+PATH=${PATH#':'}
+PATH=${PATH%':'}
+export PATH
+export PYTHONNOUSERSITE='true'
+exec -a "$0" "/nix/store/vdj54aaq67wsdmdbfcihh5ary9hbd2a3-python3.11-pip-22.3.1/bin/.pip3-wrapped"  "$@" 
